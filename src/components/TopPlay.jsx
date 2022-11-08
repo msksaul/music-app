@@ -43,7 +43,7 @@ const TopPlay = () => {
 
   useEffect(() => {
     divRef.current.scrollIntoView({ behavior: 'smooth'})
-  }, [])
+  }, [data])
 
   const topPlays = data?.slice(0, 5)
 
@@ -98,7 +98,7 @@ const TopPlay = () => {
           modules={[FreeMode]}
           className='mt-4'
         >
-          {topPlays?.map((song, i) => (
+          {topPlays?.map((song) => (
             <SwiperSlide
               key={song?.key}
               style={{ width: '25%', height: 'auto' }}
